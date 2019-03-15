@@ -5,14 +5,14 @@ var margins = {
   right: 120,
   bottom:120,
   left: 120
-}
+};
 var height = 750 - margins.top - margins.bottom;
 var width = 750 - margins.left - margins.right;
 
 var svg = d3.select("body")
 .append("svg")
 .attr("width", width)
-.attr("height", height)
+.attr("height", height);
 
 // Define the x and y scales.
 var x_Scale = d3.scaleLinear()
