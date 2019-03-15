@@ -75,8 +75,8 @@ function presentVis(data) {
 // Load the data from flask server then plot the ROC curve line chart
 // Learn from the source: https://www.w3schools.com/jsref/met_doc_getelementsbyname.asp
 function load_draw() {
-  // Create a URL to fetch the data
-  var URL = "http://localhost:5000/";
+        // Create a URL to fetch the data
+        var URL = "http://localhost:5000/";
 	var preMethod = document.getElementsByName("preprocessing_method");
 		for(var k = 0; k < preMethod.length; k++){
 			if(preMethod[k].checked){
@@ -84,12 +84,12 @@ function load_draw() {
 			}
 		}
 	var Cvalue = document.getElementById("c").value;
-  // Only keep 2 decimals, and the resulting Cvalue is a string
-  Cvalue = parseFloat(Cvalue).toFixed(2);
+        // Only keep 2 decimals, and the resulting Cvalue is a string
+        Cvalue = parseFloat(Cvalue).toFixed(2);
 
-  // Concatenate the strings based on user input to get the complete URL address for loading data
-  // Meanwhile update the visualization
-  URL = URL.concat(preprocessWay).concat("/").concat(Cvalue);
+        // Concatenate the strings based on user input to get the complete URL address for loading data
+        // Meanwhile update the visualization
+        URL = URL.concat(preprocessWay).concat("/").concat(Cvalue);
 	d3.json(URL, function(data){
 		d3.selectAll(".ROC").remove(); // Remove previous ROC curve
 		presentVis(data);
