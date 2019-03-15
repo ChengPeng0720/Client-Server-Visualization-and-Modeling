@@ -65,8 +65,8 @@ svg.append("g")
 function presentVis(data) {
   svg.append("path")
   .attr("class", "ROC")
-  .attr("stroke", 'black')
-  .attr("stroke-width", '1.8px')
+  .attr("stroke", "black")
+  .attr("stroke-width", "1.8px")
   .attr("d", plot_roc(data))
   .attr("fill", "none");
 }
